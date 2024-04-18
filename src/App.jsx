@@ -8,7 +8,7 @@ function App() {
   return (
     <>
 
-<TopNav/>
+<TopNav />
 <div>
 
 <img src='https://static.vecteezy.com/system/resources/previews/008/174/590/large_2x/fashion-advertising-web-banner-illustration-vector.jpg' className="w-100 object-fit-fill h-25"/>
