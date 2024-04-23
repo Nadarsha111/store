@@ -4,20 +4,8 @@ import makeRequest from "../../queries/makerequest";
 import { CiStar } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
 
-function Productcard() {
-  const [product, setProduct] = useState({});
-
-  useEffect(() => {
-    makeRequest
-      .get("/products/1")
-      .then((res) => {
-        setProduct(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.error("Error fetching product data:", err);
-      });
-  }, []);
+function Productcard({product}) {
+ 
 
   const star = Array.from({ length: 5 }, (_, index) => (
     <FaStar
@@ -29,21 +17,31 @@ function Productcard() {
   ));
 
   return (
-    <Card style={{ width: "255px", height: "380px",border:'none' }} className="my-5">
+    
+    <Card
+      style={{
+        width: "255px",
+        height: "380px",
+        border: "none",
+      }}
+      className="shadow-sm my-3"
+    >
       <Card.Img
         variant="top"
-        src={product.image}
-        style={{ width: "255px", height: "380px" }}
+        src={product?.image}
+        style={{ width: "100%", height: "255px" }}
         alt="product image"
-        className="object-fit-fill"
+        className="border rounded-top object-fit-contain"
       />
-      <Card.Body className="mt-2 mb-3">
+      <Card.Body className="">
         <Card.Title>{product.title?.slice(0, 20)}</Card.Title>
-        <Card.Text>{product.description?.slice(0, 50)}</Card.Text>
-        <div className="d-flex flex-row justify-content-between">
-          <div>{product.price}</div>
-          <div>{star}</div>
-        </div>
+        <Card.Text>
+          {product.description?.slice(0, 25)}
+          <div className="d-flex flex-row justify-content-between">
+            <div>{`₹ ${product?.price}`}</div>
+            <div>{star}</div>
+          </div>
+        </Card.Text>
       </Card.Body>
     </Card>
   );
