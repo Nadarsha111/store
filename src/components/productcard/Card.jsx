@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa";
 
 function Productcard({product}) {
  
-
   const star = Array.from({ length: 5 }, (_, index) => (
     <FaStar
       key={index}
