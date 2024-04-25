@@ -9,7 +9,7 @@ const CatagoriesCard = ({ title, image }) => {
         <Card.ImgOverlay className="d-flex align-items-center justify-content-center wrap bg-black bg-opacity-50 text-white text-center">
           <Card.Title>{title}</Card.Title>
         </Card.ImgOverlay>
-      </Card>
+    </Card>
     </Col>
   );
 };
