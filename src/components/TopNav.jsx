@@ -3,9 +3,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 const TopNav = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light py-4 px-md-2 px-sm-4">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light py-4 px-md-2 px-sm-4" style={{height:"10vh"}}>
+      
       <div>
-        
+
         <button
           className="navbar-toggler d-lg-none"
           type="button"
@@ -15,6 +16,7 @@ const TopNav = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
+
           <AiOutlineMenu className="border border-0" />
         </button>
 
