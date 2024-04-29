@@ -1,82 +1,34 @@
 import React from "react";
+import {
+  Container,
+  Nav,
+  Navbar,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const TopNav = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light py-4 px-md-2 px-sm-4" style={{height:"10vh"}}>
-      
-      <div>
-
-        <button
-          className="navbar-toggler d-lg-none"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-
-          <AiOutlineMenu className="border border-0" />
-        </button>
-
-        <a className="navbar-brand " href="#">
-          <img
-            src="https://w7.pngwing.com/pngs/621/196/png-transparent-e-commerce-logo-logo-e-commerce-electronic-business-ecommerce-angle-text-service.png"
-            width="50"
-            height="50"
-            className="d-inline-block align-top object-fit-fill"
-            alt=""
-          />
-        </a>
-
-      </div>
-
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home{" "}
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Men&apos;s Clothing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Women&apos;s Clothing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Electronics
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Jewelery
-            </a>
-          </li>
-        </ul>
-
-        <form className="form-inline my-2 my-lg-0 ">
-          <input
-            className="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
+    <>
+      <Navbar bg="light" data-bs-theme="light" style={{height:"12vh"}}>
+        <Container>
+          <Navbar.Brand href="#home">Ecommerce</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Men&apos;Clothing</Nav.Link>
+            <Nav.Link href="#features">Women&apos;sClothing</Nav.Link>
+            <Nav.Link href="#pricing">Electronics</Nav.Link>
+            <Nav.Link href="#pricing">Jewllery</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <FormControl type="text" placeholder="Search" className="me-2" />
+            <Button variant="outline-primary">Search</Button>
+          </Form>
+          
+        </Container>
+      </Navbar>
+    </>
   );
 };
 

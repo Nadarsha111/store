@@ -19,6 +19,7 @@ const ProductLayout = () => {
 
   return (
     <div className="container">
+      <h2 className="text-left my-4">Hot Selling</h2>
       {/*TODO:add row-col-2 for sm devices */}
       <div className="row row-cols-md-2 row-cols-lg-4 row-cols-xl-4 justify-content-between">
         {products.map((product) => (

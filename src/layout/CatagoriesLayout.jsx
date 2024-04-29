@@ -27,6 +27,7 @@ const CatagoriesLayout = () => {
   ];
   return (
     <div className="container mt-2">
+      <h2 className="text-left my-4">Catagories</h2>
       <Row xs={2} md={2} lg={4}  className="g-3">
       {data.map((catagory, index) => (
 

@@ -7,17 +7,17 @@ import CatagoriesCard from "./components/catagoriescard/CatagoriesCard";
 import CatagoriesLayout from "./layout/CatagoriesLayout";
 import HomeCarousel from "./components/carousel/HomeCarousel";
 import "./App.css";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
       <TopNav />
-      <div className="">
-        <HomeCarousel />
-      </div>
+      <HomeCarousel />
 
       <CatagoriesLayout />
       <ProductLayout />
+      <Footer />
     </>
   );
 }

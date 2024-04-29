@@ -35,7 +35,7 @@ function Productcard({product}) {
       <Card.Body className="">
         <Card.Title>{product.title?.slice(0, 20)}</Card.Title>
         <Card.Text>
-          {product.description?.slice(0, 25)}
+          {product.description?.slice(0, 15)}
           <div className="d-flex flex-row justify-content-between">
             <div>{`₹ ${product?.price}`}</div>
             <div>{star}</div>
