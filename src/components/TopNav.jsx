@@ -1,35 +1,63 @@
 import React from "react";
 import {
+  Navbar,
   Container,
   Nav,
-  Navbar,
+  NavDropdown,
   Form,
   FormControl,
   Button,
 } from "react-bootstrap";
-import { AiOutlineMenu } from "react-icons/ai";
 
-const TopNav = () => {
+function TopNav() {
   return (
-    <>
-      <Navbar bg="light" data-bs-theme="light" style={{height:"12vh"}}>
-        <Container>
-          <Navbar.Brand href="#home">Ecommerce</Navbar.Brand>
+    <Navbar
+      collapseOnSelect
+      expand="md"
+      bg="body-tertiary"
+      variant="light"
+      className="shadow "
+      style={{
+        height: "12vh",
+      }}
+    >
+      <Container>
+        <Navbar.Brand href="#" className="ml-1">Ecommerce</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Men&apos;Clothing</Nav.Link>
-            <Nav.Link href="#features">Women&apos;sClothing</Nav.Link>
-            <Nav.Link href="#pricing">Electronics</Nav.Link>
-            <Nav.Link href="#pricing">Jewllery</Nav.Link>
+            <Nav.Link href="#">Home</Nav.Link>
+            <Nav.Link href="#">Men&apos;Clothing</Nav.Link>
+            <Nav.Link href="#">Womes&apos;Clothing</Nav.Link>
+            <Nav.Link href="#">Jewellery</Nav.Link>
+            <Nav.Link href="#">Electronics</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <FormControl type="text" placeholder="Search" className="me-2" />
-            <Button variant="outline-primary">Search</Button>
-          </Form>
-          
-        </Container>
-      </Navbar>
-    </>
+          <div className="search-and-icons d-flex align-items-center">
+            <Form className="d-flex mb-2 me-2">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-secondary">Search</Button>
+            </Form>
+            <div className="user-icons d-flex mb-2">
+              <div className="profile">
+                <i className="bi bi-person"></i>
+              </div>
+              <div className="wishlist">
+                <i className="bi bi-heart"></i>
+              </div>
+              <div className="cart">
+                <i className="bi bi-cart3"></i>
+              </div>
+            </div>
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default TopNav;

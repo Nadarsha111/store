@@ -3,7 +3,8 @@ import { Carousel, Image } from "react-bootstrap";
 
 const HomeCarousel = () => {
   return (
-    <Carousel className="mb-3 " interval={null}>
+    // interval={null} stops the carousel from auto slidingn
+    <Carousel className="mb-3 ">
       <Carousel.Item className="">
         <Image
           src="https://images.pexels.com/photos/168927/pexels-photo-168927.jpeg?auto=compress&cs=tinysrgb&w=600"
